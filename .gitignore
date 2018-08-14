@@ -1,0 +1,5 @@
+app
+dist
+.port.tmp
+node_modules/
+*.log
