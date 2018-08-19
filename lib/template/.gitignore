@@ -1,4 +1,3 @@
-app
 .port.tmp
 node_modules/
 *.log
