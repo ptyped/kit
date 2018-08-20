@@ -1,4 +1,5 @@
 app
+public
 .port.tmp
 node_modules/
 *.log
