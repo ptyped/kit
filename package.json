@@ -36,5 +36,12 @@
   },
   "engines": {
     "npm": ">=6.0.0"
+  },
+  "prototypingKit": {
+    "configureWebpack": {
+      "entry": {
+        "index": "index.js"
+      }
+    }
   }
 }
