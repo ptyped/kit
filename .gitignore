@@ -1,5 +1,6 @@
-app
+app*
 public
+dependencies
 .port.tmp
 node_modules/
 *.log
