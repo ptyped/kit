@@ -43,22 +43,5 @@
   },
   "engines": {
     "npm": ">=6.0.0"
-  },
-  "prototypingKit": {
-    "dependencies": [
-      "wet-boew/wet-boew-cdn#v4.0.28.1",
-      "https://cdn.sstatic.net/Shared/stacks.css"
-    ],
-    "configureWebpack": {
-      "entry": {
-        "index": "index.js"
-      }
-    },
-    "configurePostcss": {
-      "plugins": [
-        "postcss-import",
-        "postcss-cssnext"
-      ]
-    }
   }
 }

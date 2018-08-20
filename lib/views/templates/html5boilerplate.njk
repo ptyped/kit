@@ -12,7 +12,9 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   
-  {% block stylesheets %}{% endblock %}
+  {% block stylesheets %}
+    <link href="/public/index.css" type="text/css" rel="stylesheet">
+  {% endblock %}
 </head>
 
 <body>
@@ -24,7 +26,9 @@
     {{ content }}
   {% endblock %}
 
-  {% block scripts %}{% endblock %}
+  {% block scripts %}
+      <script src="/public/index.js"></script>
+  {% endblock %}
 </body>
 
 </html>
