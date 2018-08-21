@@ -27,6 +27,7 @@
     "font-awesome": "4.7.0",
     "gray-matter": "^4.0.1",
     "immutable-css": "^1.1.2",
+    "laggard": "^2.0.1",
     "ncp": "^2.0.0",
     "node-fetch": "^2.2.0",
     "node-sass": "^4.9.3",
