@@ -5,7 +5,9 @@
   "author": "chrisdmacrae",
   "license": "MIT",
   "main": "lib/index.js",
-  "bin": "lib/cli.js",
+  "bin": {
+    "pkit": "lib/cli.js"
+  },
   "scripts": {
     "cli": "node lib/cli.js"
   },

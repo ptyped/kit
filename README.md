@@ -10,7 +10,7 @@ If something doesn't work 👎, please [create an issue](https://github.com/ptyp
 
 ```
 npm install -g @ptyped/kit
-kit init my-prototype
+pkit init my-prototype
 cd my-prototype
 npm start
 ```
