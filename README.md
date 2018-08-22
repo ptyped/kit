@@ -9,7 +9,7 @@ If something doesn't work 👎, please [create an issue](https://github.com/ptyp
 ## Quick start
 
 ```
-npm install -g @ptype/kit
+npm install -g @ptyped/kit
 kit init my-prototype
 cd my-prototype
 npm start
