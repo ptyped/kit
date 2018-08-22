@@ -1,4 +1,4 @@
-# pType Kit
+# p(roto)Typed Kit
 
 Create realistic, state-driven HTML prototypes with zero-configuration.
 
