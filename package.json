@@ -4,7 +4,6 @@
   "description": "An SSG + Express combo for making user-testable HTML prototypes",
   "author": "chrisdmacrae",
   "license": "MIT",
-  "private": true,
   "main": "lib/index.js",
   "bin": "lib/cli.js",
   "scripts": {
