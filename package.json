@@ -1,7 +1,7 @@
 {
   "name": "@ptyped/kit",
-  "version": "0.1.4",
-  "description": "An SSG + Express combo for making user-testable HTML prototypes",
+  "version": "0.1.5",
+  "description": "A zero-config HTML prototyping kit",
   "author": "chrisdmacrae",
   "license": "MIT",
   "main": "lib/index.js",
