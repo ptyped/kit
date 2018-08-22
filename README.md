@@ -9,14 +9,13 @@ If something doesn't work 👎, please [create an issue](https://github.com/ptyp
 ## Quick start
 
 ```
-npx ptype-kit my-prototype
+npm install -g @ptype/kit
+kit init my-prototype
 cd my-prototype
 npm start
 ```
 
-([npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) comes with npm 5.2+)
-
-Then open [http://localhost:9080/](http://localhost:9080/) to see your prototype.
+Then open [http://localhost:9080/](http://localhost:9080/) to see your new prototype.
 
 ## How do I update to new versions?
 
