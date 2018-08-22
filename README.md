@@ -19,10 +19,16 @@ Then open [http://localhost:9080/](http://localhost:9080/) to see your new proto
 
 ## How do I update to new versions?
 
-Easy, just run:
+To update the version used by a specific project, run the following from the project root:
 
 ```
 npm update @ptype/kit
+```
+
+To update the cli used to bootstrap new projects, run the following:
+
+```
+npm update -g @ptype/kit
 ```
 
 ## Philosophy
