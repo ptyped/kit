@@ -1,4 +1,4 @@
-# pType Kit
+# p(roto)Typed Kit
 
 Create realistic, state-driven HTML prototypes with zero-configuration.
 
@@ -22,13 +22,13 @@ Then open [http://localhost:9080/](http://localhost:9080/) to see your new proto
 To update the version used by a specific project, run the following from the project root:
 
 ```
-npm update @ptype/kit
+npm update @ptyped/kit
 ```
 
 To update the cli used to bootstrap new projects, run the following:
 
 ```
-npm update -g @ptype/kit
+npm update -g @ptyped/kit
 ```
 
 ## Philosophy
