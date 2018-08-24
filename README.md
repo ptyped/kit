@@ -53,6 +53,22 @@ You will have everything you need to start rapidly prototyping a new web product
 - A live development server that reloads when you make changes, and synchronizes behaviour across multiple tabs, browers, and devices.
 - Hassle-free updates for all of the above through a single dependency.
 
+## Documentation
+
+See our documentation:
+
+- [Quick Start](./docs/src/quickstart.md)
+- [Installation](./docs/src/installation.md)
+- [Using the kit](./docs/src/usage.md)
+- [Creating Pages](./docs/src/creating-pages.md)
+- [Writing CSS](./docs/src/stylesheets.md)
+- [Writing Javascript](./docs/src/javascript.md)
+- [Adding data to pages](./docs/src/data.md)
+- [Passing data between pages](./docs/src/passing-data.md)
+- [Routes & redirects](./docs/src/routes-and-redirects.md)
+- [Managing sessions](./docs/src/sessions.md)
+- [Updating the kit](./docs/src/updating.md)
+
 ## Popular alternatives
 
 pType Kit is a good fit for:
