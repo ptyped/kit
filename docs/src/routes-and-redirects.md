@@ -12,20 +12,19 @@ For example, for the route `/form` the following URL is used:
 http://localhost:9080/form
 ```
 
-A `routes.js` file maps routes or paths to a Javascript function that tells the kit what to render:
+A `routes.js` file maps routes (or paths) to a Javascript function that tells the kit what to do, represented by a routing function:
 
 ```
-module.exports = {
-    "route": callback(request, response, next) => {
-        response.render(page, data)
-    }
-}
+router.verb(route, callback(request, response) {
+    response.render(template, data);
+});
 ```
 
 The above breaks down as follows:
 
-- `module.exports`: tells the kit that anything inside this variable should be loaded as a route
-- `"route"`: the route (or path) you want the function to apply to
+- `router`: the router that all of your routes are added to
+- `verb`: the type of request this route should apply to (`GET` or `POST`)
+- `route`: the route (or path) you want the function to apply to (e.g, `/test`)
 - `callback`: the function that is called with the URL requested matches the route
 - `request`: an object representing the HTTP request made by the user
 - `response`: an object representing the HTTP response the kit will be send back
@@ -33,19 +32,33 @@ The above breaks down as follows:
 - `page`: the file name of a page found in `app/views`. E.g, `index.html`
 - `data`: a object representing any additional data you want to provide the page
 
+For example, in `app/views/routes.js`:
+
+```
+module.exports = function(router) {
+    router.get('/', function(request, response, next) {
+        response.render('index.html', { title: "Homepage" })
+    })
+}
+```
+
 ## Redirects
 
 Redirects allow you to map one URL to another. This is useful if you need to update an existing prototype and are removing pages or renaming pages, and need to have the old URLs go to the new URLs.
 
 For example, you may build a form prototype at `app/views/form.html` and then learn that you need more than one form, and move this and other forms to `app/views/forms/form1.html`.
 
+Redirects are created by returning an object in your `routes.js` files.
+
 In order to have the path `/form` still load your page, you can create a redirect from `/form` to `/forms/form1`:
 
 In `app/views/routes.js`:
 
 ```
-module.exports = {
-    "/form" => "/forms/form1"
+module.exports = function(router) {
+    return {
+        "/form": "/forms/form1"
+    }
 }
 ```
 
@@ -69,8 +82,8 @@ For example, let's say in `app/views/form.html` we have the following:
 If the `over18` checkbox is checked, we want to send them to `/success`, otherwise send them to `/fail`. We can do this in `app/views/routes.js`:
 
 ```
-module.exports = {
-    "/form": (request, response, next) => {
+module.exports = function(router) {
+    router.post("/form", function(request, response, next) {
         const isOver18 = response.locals.data['over18'] === "on"
 
         if (isOver18) {
@@ -78,12 +91,13 @@ module.exports = {
         } else {
             res.redirect('/fail)
         }
-    }
+    })
 }
 ```
 
 Let's break this down:
 
+- `router.post`: tells the kit to only apply this route for `POST` requests
 - `const isOver18`: a Javascript constant that stores a `boolean` (true or false) value on whether or not the checkbox was checked
 - `response.locals.data['over18`]:
   - `response.locals`: we can access all of the data available to a page from this variable.
@@ -96,8 +110,8 @@ Let's break this down:
 We can also change the _page_ rendered without changing the route or path. Using the same example, we can dynamically change what template `/forms` renders so that in renders the form if the checkbox was not checked, or a success template if it has been:
 
 ```
-module.exports = {
-    "/form": (request, response, next) => {
+module.exports = function(router) {
+    router.post("/form", function(request, response, next) {
         const isOver18 = response.locals.data['over18'] === "on"
 
         if (isOver18) {
@@ -105,7 +119,7 @@ module.exports = {
         } else {
             res.render('form.html)
         }
-    }
+    })
 }
 ```
 
@@ -143,8 +157,8 @@ Here we've added a conditional to check for an `error` variable, and display an 
 In `app/views/routes.js`:
 
 ```
-module.exports = {
-    "/form": (request, response, next) => {
+module.exports = function(router) {
+    router.post("/form", function(request, response, next) {
         const over18 = response.locals.data['over18']
         const isOver18 = response.locals.data['over18'] === "on
 
@@ -156,10 +170,13 @@ module.exports = {
 
             res.render('form.html', {error: error})
         }
-    }
+    })
 }
 ```
 
 Here we retreived the `over18` value from `request.locals.data`. If the data indicates the checkbox hasn't been checked, we setup an error and then tell the `response` to render `form.html` again with the error.
 
 > Note: you can pass whatever data you'd like to a route when using `response.render`. However, this data will be overwritten by any conflicts found the in page's [front matter](./data.md#using-front-matter).
+
+## Learn more
+To learn more about express routing, see the [express documentation](http://expressjs.com/4x/api.html#app.VERB).
