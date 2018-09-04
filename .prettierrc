@@ -1,0 +1,31 @@
+{
+    "printWidth": 80,
+    "tabWidth": 2,
+    "useTabs": false,
+    "overrides": [
+        {
+            "files": "*.js",
+            "options": {
+                "semi": true,
+                "singleQuote": true,
+                "trailingComma": "none",
+                "bracketSpacing": true,
+                "arrowParens": "avoid",
+                "parser": "flow"
+            }
+        },
+        {
+            "files": "*.json",
+            "options": {
+                "parser": "json"
+            }
+        },
+        {
+            "files": [
+                "*.css",
+                ".scss"
+            ],
+            "options": {}
+        }
+    ]
+}
