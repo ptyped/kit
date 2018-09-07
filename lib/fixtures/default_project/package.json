@@ -1,0 +1,7 @@
+{
+    "name": "default_project",
+    "version": "0.1.0",
+    "pkit": {
+        "template": "ptyped/ptyped-kit-starter"
+    }
+}
