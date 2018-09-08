@@ -11,7 +11,9 @@
   "scripts": {
     "cli": "node lib/cli.js",
     "lint": "eslint lib/**",
-    "test": "jest lib",
+    "test": "jest lib/**/*",
+    "test:unit": "jest lib/**/*.test.unit.js",
+    "test:integration": "jest lib/**/*.test.integration.js",
     "coverage": "jest --collectCoverageFrom=lib/**.js --coverage lib"
   },
   "files": [
@@ -34,12 +36,12 @@
     "eslint-plugin-jest": "^21.22.0",
     "express": "^4.16.3",
     "express-session": "^1.15.6",
+    "fs-extra": "^7.0.0",
     "gray-matter": "^4.0.1",
     "immutable-css": "^1.1.2",
     "jest": "^23.5.0",
     "laggard": "^2.0.1",
     "mkdirp": "^0.5.1",
-    "ncp": "^2.0.0",
     "nedb-session-store": "^1.1.2",
     "node-fetch": "^2.2.0",
     "node-sass": "^4.9.3",
@@ -63,5 +65,12 @@
   },
   "engines": {
     "npm": ">=6.0.0"
+  },
+  "jest": {
+    "testMatch": [
+      "**/__tests__/**/*.js?(x)",
+      "**/?(*.)+(spec|test).js?(x)",
+      "**/?(*.)+(spec|test)?(*.)?(unit|integration).js?(x)"
+    ]
   }
 }
