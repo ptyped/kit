@@ -6,6 +6,10 @@ pType kit works on MacOS, Windows, and Linux.
 
 If something doesn't work 👎, please [create an issue](https://github.com/ptype/kit/issues/new).
 
+[![CircleCI](https://circleci.com/gh/ptyped/kit/tree/master.svg?style=svg&circle-token=30f22c5c7536a2dc8623b175b5a4ef0db095f690)](https://circleci.com/gh/ptyped/kit/tree/master)
+
+[![npm version](https://badge.fury.io/js/%40ptyped%2Fkit.svg)](https://badge.fury.io/js/%40ptyped%2Fkit)
+
 ## Quick start
 
 ```
