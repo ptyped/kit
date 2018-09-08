@@ -1,8 +1,8 @@
+.tmp/
+*.tmp
 app*
 public
 dependencies/*
-.port.tmp
 node_modules/
 *.log
-lib/fixtures/generated_project/
 coverage/
