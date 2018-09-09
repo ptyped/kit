@@ -20,6 +20,8 @@ jobs:
   test:
     <<: *defaults
     steps:
+      - attach_workspace:
+          at: ~/repo
       - checkout
 
       # Download and cache dependencies
