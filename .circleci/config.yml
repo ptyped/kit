@@ -20,8 +20,6 @@ jobs:
   test:
     <<: *defaults
     steps:
-      - attach_workspace:
-          at: ~/repo
       - checkout
 
       # Download and cache dependencies
@@ -41,6 +39,10 @@ jobs:
       # run tests
       - run: yarn test:unit
       - run: yarn test:integration
+      
+      - persist_to_workspace:
+          root: ~/repo
+          paths: .
   deploy:
     <<: *defaults
     steps:
