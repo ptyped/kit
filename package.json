@@ -71,5 +71,8 @@
       "**/?(*.)+(spec|test).js?(x)",
       "**/?(*.)+(spec|test)?(*.)?(unit|integration).js?(x)"
     ]
+  },
+  "devDependencies": {
+    "jquery": "^3.3.1"
   }
 }
