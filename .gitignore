@@ -1,6 +1,6 @@
 .tmp/
 *.tmp
-app*
+app/*
 public
 dependencies/*
 node_modules/

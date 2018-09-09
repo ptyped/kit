@@ -1,0 +1,6 @@
+title: local_data_title
+localDataKey: true
+shouldBeFrontMatter: false
+shouldBeRouteData: false
+global:
+  shouldBeLocalData: true
