@@ -1,0 +1,5 @@
+localDataKey: true
+shouldBeFrontMatter: false
+shouldBeRouteData: false
+global:
+  shouldBeLocalData: true

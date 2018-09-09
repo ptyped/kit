@@ -1,35 +1,41 @@
-
 <!doctype html>
-<html class="no-js" lang="{{ site.lang }}">
-
+<html class="no-js" lang="">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>{{ title }}</title>
-  <meta name="description" content="{{ description | default(site.description) }}">
+  <title></title>
+  <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  {% block meta %}{% endblock %}
+  
 
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   
-  {% block stylesheets %}
+  
     <link href="/public/index.css" type="text/css" rel="stylesheet">
-  {% endblock %}
+  
 </head>
-
-<body class="{% block bodyClasses %}{% endblock %}">
+<body class="">
   <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
-  {% block content %}
-    {{ content }}
-  {% endblock %}
+  
+<ul>
+    <li id="frontMatterKey">true</li>
+    <li id="routeKey">true</li>
+    <li id="localDataKey">true</li>
+    <li id="childLocalDataKey"></li>
+    <li id="globalDataKey">true</li>
+    <li id="sessionKey">true</li>
+    <li id="shouldBeFrontMatter">true</li>
+    <li id="shouldBeRouteData">true</li>
+    <li id="shouldBeLocalData">true</li>
+</ul>
 
-  {% block scripts %}
-      <script src="/public/index.js"></script>
-  {% endblock %}
+
+  
+    <script src="/public/index.js"></script>
+  
 </body>
-
 </html>
