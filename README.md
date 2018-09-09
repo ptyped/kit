@@ -41,7 +41,7 @@ npm update -g @ptyped/kit
 
 - **No configuration required**: you don't need to configure anything. Reasonably good configuration is handled for you so you can focus on your prototype & interaction design.
 
-> Protip: need a custom build config, custom dependencies (e.g, bootstrap) or something else? We've got you covered. Create a custom "project template" for your whole team to re-use.
+> Protip: need a custom build config, custom dependencies (e.g, bootstrap) or something else? We've got you covered. [Create a custom "project template"](./docs/src/project-templates.md) for your whole team to re-use.
 
 ## What's included?
 
@@ -71,6 +71,7 @@ See our documentation:
 - [Passing data between pages](./docs/src/passing-data.md)
 - [Routes & redirects](./docs/src/routes-and-redirects.md)
 - [Managing sessions](./docs/src/sessions.md)
+- [Creating project templates](./docs/src/project-templates.md)
 - [Updating the kit](./docs/src/updating.md)
 
 ## Popular alternatives
