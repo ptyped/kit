@@ -21,7 +21,7 @@ jobs:
     <<: *defaults
     steps:
       - attach_workspace:
-        at: ~/repo
+          at: ~/repo
       - checkout
 
       # Download and cache dependencies
