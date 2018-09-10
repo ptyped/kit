@@ -11,11 +11,11 @@ const routes = JSON.parse(fs.readFileSync(routesPath, {encoding: 'utf8'}))
 /**
  * Gets responses from routes used in testing for easy updating
  */
-const getResponses = async (cwd) => {
-    if (!cwd) cwd = process.cwd()
+const getResponses = async (opts, routes) => {
+    if (!opts.cwd) opts.cwd = process.cwd()
 
     try {
-        const configInstance = new Config({cwd: cwd})
+        const configInstance = new Config(opts)
         const config = configInstance.config
         const app = new App(config)
         const paths = Object.keys(routes)
@@ -46,6 +46,16 @@ module.exports = getResponses;
 (async () => {
     const cwd = path.resolve(__dirname, '../lib/fixtures/app/default_project')
 
-    await getResponses(cwd)
+    await getResponses({cwd: cwd}, routes)
+    await getResponses({
+        cwd: cwd,
+        auth: {
+            username: 'admin',
+            password: 'password'
+        }
+    }, {
+        '/': 'auth-failed.html'
+    })
+
     process.exit(0)
 })()
