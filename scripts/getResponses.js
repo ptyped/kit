@@ -47,15 +47,6 @@ module.exports = getResponses;
     const cwd = path.resolve(__dirname, '../lib/fixtures/app/default_project')
 
     await getResponses({cwd: cwd}, routes)
-    await getResponses({
-        cwd: cwd,
-        auth: {
-            username: 'admin',
-            password: 'password'
-        }
-    }, {
-        '/': 'auth-failed.html'
-    })
 
     process.exit(0)
 })()
