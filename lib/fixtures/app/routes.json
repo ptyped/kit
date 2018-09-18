@@ -1,5 +1,6 @@
 {
     "/": "index.html",
     "/404": "404-default.html",
-    "/sibling/child": "sibling-child.html"
+    "/sibling/child": "sibling-child.html",
+    "/auth-failed": "auth-failed.html"
 }
